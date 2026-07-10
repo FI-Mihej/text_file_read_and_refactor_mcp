@@ -1,0 +1,5 @@
+hatch
+twine
+wheel
+build
+cengal-light[cengal__text_processing__encoding_detection]~=5.0

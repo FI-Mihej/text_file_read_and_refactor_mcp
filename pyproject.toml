@@ -1,0 +1,126 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "text-file-read-and-refactor-mcp"
+dynamic = ["version"]
+description = "Token-efficient Python stdio MCP server for safe text-file search, reading, and refactoring with automatic BOM/codepage handling."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [
+    { name = "ButenkoMS", email = "gtalk@butenkoms.space" },
+]
+keywords = [
+    "cengal",
+    "crossplatform",
+    "LLM",
+    "MCP",
+    "MCP-server",
+    "MCP server",
+    "text processing",
+    "file system",
+    "refactoring",
+]
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: OS Independent',
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Environment :: MacOS X',
+    'Environment :: Web Environment',
+    'Environment :: Win32 (MS Windows)',
+    'Environment :: X11 Applications',
+    'Framework :: AsyncIO',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Education',
+    'Intended Audience :: Financial and Insurance Industry',
+    'Intended Audience :: Healthcare Industry',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: Manufacturing',
+    'Intended Audience :: Other Audience',
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: System Administrators',
+    'Intended Audience :: Telecommunications Industry',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: Android',
+    'Operating System :: MacOS',
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft',
+    'Operating System :: Microsoft :: Windows :: Windows 7',
+    'Operating System :: Microsoft :: Windows :: Windows 8',
+    'Operating System :: Microsoft :: Windows :: Windows 8.1',
+    'Operating System :: Microsoft :: Windows :: Windows 10',
+    'Operating System :: Microsoft :: Windows :: Windows 11',
+    'Operating System :: Microsoft :: Windows :: Windows Server 2008',
+    'Operating System :: Microsoft :: Windows :: Windows Vista',
+    'Operating System :: OS Independent',
+    'Operating System :: POSIX',
+    'Operating System :: POSIX :: BSD',
+    'Operating System :: POSIX :: BSD :: FreeBSD',
+    'Operating System :: POSIX :: BSD :: NetBSD',
+    'Operating System :: POSIX :: BSD :: OpenBSD',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: POSIX :: Other',
+    'Operating System :: Unix',
+    'Operating System :: iOS',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    'Programming Language :: Python :: 3.15',
+    'Programming Language :: Python :: Implementation',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Programming Language :: Python :: Implementation :: MicroPython',
+    'Programming Language :: Python :: Implementation :: PyPy',
+    'Programming Language :: Unix Shell',
+    'Topic :: Adaptive Technologies',
+    'Topic :: Communications',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Topic :: Scientific/Engineering :: Artificial Life',
+    'Topic :: Software Development',
+    'Topic :: Software Development :: Libraries',
+    'Topic :: Software Development :: Libraries :: Application Frameworks',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Typing :: Typed',
+]
+dependencies = [
+    "cengal-light[cengal__text_processing__encoding_detection]~=5.0",
+]
+
+[project.scripts]
+text-file-read-and-refactor-mcp = "text_file_read_and_refactor_mcp.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+norecursedirs = [
+    ".venv",
+    "venv",
+    "build",
+    "dist",
+    "dependencies",
+    ".git",
+    ".pytest_cache",
+]
+
+[project.urls]
+Homepage = "https://github.com/FI-Mihej/text_file_read_and_refactor_mcp"
+
+[tool.hatch.version]
+path = "text_file_read_and_refactor_mcp/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/text_file_read_and_refactor_mcp",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "/text_file_read_and_refactor_mcp",
+]
