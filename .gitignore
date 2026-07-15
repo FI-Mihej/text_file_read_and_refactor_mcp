@@ -9,3 +9,4 @@ dependencies/
 tmp/
 wrk/
 /uv.lock
+/Dockerfile
