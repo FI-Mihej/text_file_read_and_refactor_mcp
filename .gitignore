@@ -8,3 +8,4 @@ dist/
 dependencies/
 tmp/
 wrk/
+/uv.lock

@@ -17,6 +17,6 @@
 
 """Token-efficient text-file search and refactoring MCP server."""
 
-__version__ = "1.12.0"
+__version__ = "1.12.1"
 
 from .versions import *

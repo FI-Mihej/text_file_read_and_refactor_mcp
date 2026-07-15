@@ -94,7 +94,7 @@ dependencies = [
 ]
 
 [project.scripts]
-text-file-read-and-refactor-mcp = "text_file_read_and_refactor_mcp.server:main"
+text-file-read-and-refactor-mcp = "text_file_read_and_refactor_mcp:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

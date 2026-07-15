@@ -36,27 +36,33 @@ Github repository is a curated public mirror of the project. Active development 
 
 ## Tools
 
+`Slice` concept: an analog of the `slice(start: integer, stop: integer)` - stores the start and end indices of a range.
+
+`Boundary` concept: an analog of the `Boundary(text: string, type: Enum[text, word, dev_word, regex])`
+
+`Span` concept: an analog of the `Span(left_boundary: Boundary, right_boundary: Boundary)`. It allows for search/replace operations such as `give me the text between "my_config_param:" and ";"` or `replace the text between "%my_regex_1%" and "%my_regex_2%" with "my_text"`.
+
 Read-only tools:
 
-- `text_file__list_allowed_directories`
-- `text_file__file_content_length`
-- `text_file__read_slice`
-- `text_file__file_lines_num`
-- `text_file__read_content_by_line_range`
-- `text_file__find_text`
-- `text_file__expand_slice_to_lines`
-- `text_file__find_span_boundaries`
-- `text_file__find_span_between_boundaries`
-- `text_file__find_span_with_boundaries`
+- `text_file__list_allowed_directories` - in pseudocode: "text_file__list_allowed_directories() -> List[directory_path]"
+- `text_file__file_content_length` - in pseudocode: "text_file__file_content_length() -> integer_characters_num"
+- `text_file__read_slice` - in pseudocode: "text_file__read_slice(characters_slice) -> text"
+- `text_file__file_lines_num` - in pseudocode: "text_file__file_lines_num() -> integer_lines_num"
+- `text_file__read_content_by_line_range` - in pseudocode: "text_file__read_content_by_line_range(lines_slice) -> text"
+- `text_file__find_text` - in pseudocode: "text_file__find_text(text, type: Enum[text, word, dev_word]) -> characters_slice"
+- `text_file__expand_slice_to_lines` - in pseudocode: "text_file__expand_slice_to_lines(characters_slice) -> lines_slice"
+- `text_file__find_span_boundaries` - in pseudocode: "text_file__find_span_boundaries(left_boundary, right_boundary) -> Tuple[left_boundary_characters_slice, right_boundary_characters_slice]"
+- `text_file__find_span_between_boundaries` - in pseudocode: "text_file__find_span_between_boundaries(left_boundary, right_boundary) -> text". Example: `text_file__find_span_between_boundaries("my_config_param:", ";")` will return string " my_value".
+- `text_file__find_span_with_boundaries` - in pseudocode: "text_file__find_span_with_boundaries(left_boundary, right_boundary) -> text". Example: `text_file__find_span_with_boundaries("my_config_param:", ";")` will return string "my_config_param: my_value;".
 
 Edit tools:
 
-- `text_file__replace_content_by_line_range`
-- `text_file__replace_slice`
-- `text_file__replace_text`
-- `text_file__replace_span_between_boundaries`
-- `text_file__replace_span_with_boundaries`
-- `text_file__patch_spans_by_boundary_patterns`
+- `text_file__replace_content_by_line_range` - in pseudocode: "text_file__replace_content_by_line_range(text, lines_slice)"
+- `text_file__replace_slice` - in pseudocode: "text_file__replace_slice(text, characters_slice)"
+- `text_file__replace_text` - in pseudocode: "text_file__replace_slice(old_text, new_text)"
+- `text_file__replace_span_between_boundaries` - in pseudocode: "text_file__replace_span_between_boundaries(text, left_boundary, right_boundary)".
+- `text_file__replace_span_with_boundaries` - in pseudocode: "text_file__replace_span_with_boundaries(text, left_boundary, right_boundary)".
+- `text_file__patch_spans_by_boundary_patterns` - in pseudocode: "text_file__patch_spans_by_boundary_patterns(List[Tuple[text, left_boundary, right_boundary]])".
 
 # Cengal
 
