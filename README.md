@@ -4,11 +4,18 @@
 
 ![GitHub License](https://img.shields.io/github/license/FI-Mihej/text_file_read_and_refactor_mcp?color=darkgreen) ![Static Badge](https://img.shields.io/badge/API_status-Stable-darkgreen)
 
+[![text_file_read_and_refactor_mcp MCP server](https://glama.ai/mcp/servers/FI-Mihej/text_file_read_and_refactor_mcp/badges/score.svg)](https://glama.ai/mcp/servers/FI-Mihej/text_file_read_and_refactor_mcp)
+
+
 # Text File Read And Refactor MCP
 
 Token-efficient Python stdio MCP server exposing safe text-file search,
 reading, and refactoring tools. Tools automatically resolve the file BOM and
 codepage; edit tools save files with their original encoding and BOM.
+
+# Glama.AI
+
+[![text_file_read_and_refactor_mcp MCP server](https://glama.ai/mcp/servers/FI-Mihej/text_file_read_and_refactor_mcp/badges/card.svg)](https://glama.ai/mcp/servers/FI-Mihej/text_file_read_and_refactor_mcp)
 
 # Github repository
 
